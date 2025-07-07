@@ -4,11 +4,25 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        TriangleNumberCalculator calculator = new TriangleNumberCalculator();
+        // Example usage of TriangleNumberCalculator
+
+        System.out.println(calculator.value(1)); // This should print out 1
+        System.out.println(calculator.value(2)); // This should print out 3
+        System.out.println(calculator.value(4)); // This should print out 10
+        
+        System.out.println(calculator.add(1, 1)); // This should print out 2
+        System.out.println(calculator.add(2, 3)); // This should print out 9
+        System.out.println(calculator.add(4, 2)); // This should print out 13
+        
+        System.out.println(calculator.subtract(1, 1)); // This should print out 0
+        System.out.println(calculator.subtract(2, 3)); // This should print out -3
+        System.out.println(calculator.subtract(4, 2)); // This should print out 7
+
+        // Additional test cases
+        System.out.println(calculator.value(13000)); // This should print out the 13000th triangular number
+        //System.out.println(calculator.value(18000)); // This should crash with a stack overflow error
+        System.out.println(calculator.add(20000, 10000)); // This should print out the sum of the 20000th triangular number with itself
     }
 }
